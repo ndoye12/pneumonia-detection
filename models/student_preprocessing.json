@@ -1,0 +1,550 @@
+{
+  "description": "TP2 - Student Performance (UCI student-mat.csv), cible G3",
+  "raw_features": [
+    {
+      "name": "school",
+      "type": "categorical",
+      "choices": [
+        "GP",
+        "MS"
+      ],
+      "default": "GP"
+    },
+    {
+      "name": "sex",
+      "type": "categorical",
+      "choices": [
+        "F",
+        "M"
+      ],
+      "default": "F"
+    },
+    {
+      "name": "age",
+      "type": "numeric",
+      "min": 15,
+      "max": 22,
+      "default": 17
+    },
+    {
+      "name": "address",
+      "type": "categorical",
+      "choices": [
+        "R",
+        "U"
+      ],
+      "default": "U"
+    },
+    {
+      "name": "famsize",
+      "type": "categorical",
+      "choices": [
+        "GT3",
+        "LE3"
+      ],
+      "default": "GT3"
+    },
+    {
+      "name": "Pstatus",
+      "type": "categorical",
+      "choices": [
+        "A",
+        "T"
+      ],
+      "default": "T"
+    },
+    {
+      "name": "Medu",
+      "type": "numeric",
+      "min": 0,
+      "max": 4,
+      "default": 3
+    },
+    {
+      "name": "Fedu",
+      "type": "numeric",
+      "min": 0,
+      "max": 4,
+      "default": 2
+    },
+    {
+      "name": "Mjob",
+      "type": "categorical",
+      "choices": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+      ],
+      "default": "other"
+    },
+    {
+      "name": "Fjob",
+      "type": "categorical",
+      "choices": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+      ],
+      "default": "other"
+    },
+    {
+      "name": "reason",
+      "type": "categorical",
+      "choices": [
+        "course",
+        "home",
+        "other",
+        "reputation"
+      ],
+      "default": "course"
+    },
+    {
+      "name": "guardian",
+      "type": "categorical",
+      "choices": [
+        "father",
+        "mother",
+        "other"
+      ],
+      "default": "mother"
+    },
+    {
+      "name": "traveltime",
+      "type": "numeric",
+      "min": 1,
+      "max": 4,
+      "default": 1
+    },
+    {
+      "name": "studytime",
+      "type": "numeric",
+      "min": 1,
+      "max": 4,
+      "default": 2
+    },
+    {
+      "name": "failures",
+      "type": "numeric",
+      "min": 0,
+      "max": 3,
+      "default": 0
+    },
+    {
+      "name": "schoolsup",
+      "type": "categorical",
+      "choices": [
+        "no",
+        "yes"
+      ],
+      "default": "no"
+    },
+    {
+      "name": "famsup",
+      "type": "categorical",
+      "choices": [
+        "no",
+        "yes"
+      ],
+      "default": "yes"
+    },
+    {
+      "name": "paid",
+      "type": "categorical",
+      "choices": [
+        "no",
+        "yes"
+      ],
+      "default": "no"
+    },
+    {
+      "name": "activities",
+      "type": "categorical",
+      "choices": [
+        "no",
+        "yes"
+      ],
+      "default": "yes"
+    },
+    {
+      "name": "nursery",
+      "type": "categorical",
+      "choices": [
+        "no",
+        "yes"
+      ],
+      "default": "yes"
+    },
+    {
+      "name": "higher",
+      "type": "categorical",
+      "choices": [
+        "no",
+        "yes"
+      ],
+      "default": "yes"
+    },
+    {
+      "name": "internet",
+      "type": "categorical",
+      "choices": [
+        "no",
+        "yes"
+      ],
+      "default": "yes"
+    },
+    {
+      "name": "romantic",
+      "type": "categorical",
+      "choices": [
+        "no",
+        "yes"
+      ],
+      "default": "no"
+    },
+    {
+      "name": "famrel",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 4
+    },
+    {
+      "name": "freetime",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
+    {
+      "name": "goout",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
+    {
+      "name": "Dalc",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 1
+    },
+    {
+      "name": "Walc",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 2
+    },
+    {
+      "name": "health",
+      "type": "numeric",
+      "min": 1,
+      "max": 5,
+      "default": 4
+    },
+    {
+      "name": "absences",
+      "type": "numeric",
+      "min": 0,
+      "max": 75,
+      "default": 4
+    },
+    {
+      "name": "G1",
+      "type": "numeric",
+      "min": 3,
+      "max": 19,
+      "default": 11
+    },
+    {
+      "name": "G2",
+      "type": "numeric",
+      "min": 0,
+      "max": 19,
+      "default": 11
+    }
+  ],
+  "encoded": [
+    {
+      "column": "age",
+      "source": "age"
+    },
+    {
+      "column": "Medu",
+      "source": "Medu"
+    },
+    {
+      "column": "Fedu",
+      "source": "Fedu"
+    },
+    {
+      "column": "traveltime",
+      "source": "traveltime"
+    },
+    {
+      "column": "studytime",
+      "source": "studytime"
+    },
+    {
+      "column": "failures",
+      "source": "failures"
+    },
+    {
+      "column": "famrel",
+      "source": "famrel"
+    },
+    {
+      "column": "freetime",
+      "source": "freetime"
+    },
+    {
+      "column": "goout",
+      "source": "goout"
+    },
+    {
+      "column": "Dalc",
+      "source": "Dalc"
+    },
+    {
+      "column": "Walc",
+      "source": "Walc"
+    },
+    {
+      "column": "health",
+      "source": "health"
+    },
+    {
+      "column": "absences",
+      "source": "absences"
+    },
+    {
+      "column": "G1",
+      "source": "G1"
+    },
+    {
+      "column": "G2",
+      "source": "G2"
+    },
+    {
+      "column": "school_MS",
+      "source": "school",
+      "value": "MS"
+    },
+    {
+      "column": "sex_M",
+      "source": "sex",
+      "value": "M"
+    },
+    {
+      "column": "address_U",
+      "source": "address",
+      "value": "U"
+    },
+    {
+      "column": "famsize_LE3",
+      "source": "famsize",
+      "value": "LE3"
+    },
+    {
+      "column": "Pstatus_T",
+      "source": "Pstatus",
+      "value": "T"
+    },
+    {
+      "column": "Mjob_health",
+      "source": "Mjob",
+      "value": "health"
+    },
+    {
+      "column": "Mjob_other",
+      "source": "Mjob",
+      "value": "other"
+    },
+    {
+      "column": "Mjob_services",
+      "source": "Mjob",
+      "value": "services"
+    },
+    {
+      "column": "Mjob_teacher",
+      "source": "Mjob",
+      "value": "teacher"
+    },
+    {
+      "column": "Fjob_health",
+      "source": "Fjob",
+      "value": "health"
+    },
+    {
+      "column": "Fjob_other",
+      "source": "Fjob",
+      "value": "other"
+    },
+    {
+      "column": "Fjob_services",
+      "source": "Fjob",
+      "value": "services"
+    },
+    {
+      "column": "Fjob_teacher",
+      "source": "Fjob",
+      "value": "teacher"
+    },
+    {
+      "column": "reason_home",
+      "source": "reason",
+      "value": "home"
+    },
+    {
+      "column": "reason_other",
+      "source": "reason",
+      "value": "other"
+    },
+    {
+      "column": "reason_reputation",
+      "source": "reason",
+      "value": "reputation"
+    },
+    {
+      "column": "guardian_mother",
+      "source": "guardian",
+      "value": "mother"
+    },
+    {
+      "column": "guardian_other",
+      "source": "guardian",
+      "value": "other"
+    },
+    {
+      "column": "schoolsup_yes",
+      "source": "schoolsup",
+      "value": "yes"
+    },
+    {
+      "column": "famsup_yes",
+      "source": "famsup",
+      "value": "yes"
+    },
+    {
+      "column": "paid_yes",
+      "source": "paid",
+      "value": "yes"
+    },
+    {
+      "column": "activities_yes",
+      "source": "activities",
+      "value": "yes"
+    },
+    {
+      "column": "nursery_yes",
+      "source": "nursery",
+      "value": "yes"
+    },
+    {
+      "column": "higher_yes",
+      "source": "higher",
+      "value": "yes"
+    },
+    {
+      "column": "internet_yes",
+      "source": "internet",
+      "value": "yes"
+    },
+    {
+      "column": "romantic_yes",
+      "source": "romantic",
+      "value": "yes"
+    }
+  ],
+  "mean": [
+    16.74367088607595,
+    2.7341772151898733,
+    2.5443037974683542,
+    1.4303797468354431,
+    2.0474683544303796,
+    0.33544303797468356,
+    3.9430379746835444,
+    3.2183544303797467,
+    3.161392405063291,
+    1.5,
+    2.3449367088607596,
+    3.518987341772152,
+    5.905063291139241,
+    10.933544303797468,
+    10.651898734177216,
+    0.10759493670886076,
+    0.4620253164556962,
+    0.7816455696202531,
+    0.2848101265822785,
+    0.8987341772151899,
+    0.08544303797468354,
+    0.34810126582278483,
+    0.26582278481012656,
+    0.13924050632911392,
+    0.05063291139240506,
+    0.5632911392405063,
+    0.2626582278481013,
+    0.06645569620253164,
+    0.26582278481012656,
+    0.10126582278481013,
+    0.2626582278481013,
+    0.6930379746835443,
+    0.08544303797468354,
+    0.13924050632911392,
+    0.6044303797468354,
+    0.4588607594936709,
+    0.49683544303797467,
+    0.8006329113924051,
+    0.9430379746835443,
+    0.8386075949367089,
+    0.3449367088607595
+  ],
+  "scale": [
+    1.2682058264596894,
+    1.0786637392003415,
+    1.076768117374012,
+    0.6877507699851203,
+    0.8349334368291085,
+    0.7344227001199856,
+    0.8840619063471324,
+    1.0187072104919155,
+    1.1177070042207347,
+    0.9018265571829798,
+    1.2943424834056332,
+    1.4084802788971882,
+    8.408696503901684,
+    3.2117291127376846,
+    3.7499826416304973,
+    0.30986814341502905,
+    0.49855583780526525,
+    0.4131292450472166,
+    0.451323961671065,
+    0.3016803870332401,
+    0.27953984552535677,
+    0.4763683181692079,
+    0.4417703383953202,
+    0.34619732483993276,
+    0.2192469376669465,
+    0.49597805565734343,
+    0.440078269392839,
+    0.249076969318258,
+    0.4417703383953202,
+    0.3016803870332401,
+    0.440078269392839,
+    0.4612334987076234,
+    0.27953984552535677,
+    0.34619732483993276,
+    0.48897269431526724,
+    0.4983046888105333,
+    0.49998998547894347,
+    0.39952453314874964,
+    0.23177004333671586,
+    0.36789250692447883,
+    0.47534763672607766
+  ]
+}

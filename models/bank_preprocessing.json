@@ -1,0 +1,152 @@
+{
+  "description": "DNN Bank Marketing (LabelEncoder + RobustScaler)",
+  "features": [
+    "age",
+    "job",
+    "marital",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "contact",
+    "month",
+    "day_of_week",
+    "duration",
+    "campaign",
+    "pdays",
+    "previous",
+    "poutcome"
+  ],
+  "categories": {
+    "job": [
+      "admin.",
+      "blue-collar",
+      "entrepreneur",
+      "housemaid",
+      "management",
+      "retired",
+      "self-employed",
+      "services",
+      "student",
+      "technician",
+      "unemployed",
+      "unknown"
+    ],
+    "marital": [
+      "divorced",
+      "married",
+      "single",
+      "unknown"
+    ],
+    "education": [
+      "basic.4y",
+      "basic.6y",
+      "basic.9y",
+      "high.school",
+      "illiterate",
+      "professional.course",
+      "university.degree",
+      "unknown"
+    ],
+    "default": [
+      "no",
+      "unknown",
+      "yes"
+    ],
+    "housing": [
+      "no",
+      "unknown",
+      "yes"
+    ],
+    "loan": [
+      "no",
+      "unknown",
+      "yes"
+    ],
+    "contact": [
+      "cellular",
+      "telephone"
+    ],
+    "month": [
+      "apr",
+      "aug",
+      "dec",
+      "jul",
+      "jun",
+      "mar",
+      "may",
+      "nov",
+      "oct",
+      "sep"
+    ],
+    "day_of_week": [
+      "fri",
+      "mon",
+      "thu",
+      "tue",
+      "wed"
+    ],
+    "poutcome": [
+      "failure",
+      "nonexistent",
+      "success"
+    ]
+  },
+  "category_defaults": {
+    "job": "admin.",
+    "marital": "married",
+    "education": "university.degree",
+    "default": "no",
+    "housing": "yes",
+    "loan": "no",
+    "contact": "cellular",
+    "month": "may",
+    "day_of_week": "thu",
+    "poutcome": "nonexistent"
+  },
+  "target_classes": [
+    "no",
+    "yes"
+  ],
+  "numeric_defaults": {
+    "age": 38,
+    "duration": 180,
+    "campaign": 2,
+    "pdays": 999,
+    "previous": 0
+  },
+  "center": [
+    38.0,
+    2.0,
+    1.0,
+    3.0,
+    0.0,
+    2.0,
+    0.0,
+    0.0,
+    4.0,
+    2.0,
+    172.0,
+    2.0,
+    999.0,
+    0.0,
+    1.0
+  ],
+  "scale": [
+    15.0,
+    7.0,
+    1.0,
+    4.0,
+    1.0,
+    2.0,
+    1.0,
+    1.0,
+    3.0,
+    2.0,
+    171.0,
+    2.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}
